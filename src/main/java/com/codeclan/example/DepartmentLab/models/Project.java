@@ -18,7 +18,7 @@ public class Project {
     private String name;
 
     @Column(name = "duration")
-    private Long duration;
+    private int duration;
 
     @JsonIgnoreProperties(value = "projects")
     @ManyToMany
@@ -36,7 +36,7 @@ public class Project {
             })
     private List<Employee> employees;
 
-    public Project(String name, Long duration) {
+    public Project(String name, int duration) {
         this.name = name;
         this.duration = duration;
         this.employees = new ArrayList<>();
@@ -54,7 +54,7 @@ public class Project {
         return name;
     }
 
-    public Long getDuration() {
+    public int getDuration() {
         return duration;
     }
 
@@ -70,7 +70,7 @@ public class Project {
         this.name = name;
     }
 
-    public void setDuration(Long duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 

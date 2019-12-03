@@ -53,6 +53,10 @@ public class Employee {
         this.projects = new ArrayList<Project>();
     }
 
+    public Employee() {
+
+    }
+
     public Long getId() {
         return id;
     }
@@ -101,7 +105,4 @@ public class Employee {
         this.projects = projects;
     }
 
-    public void addProject(Project project) {
-        this.projects.add(project);
-    }
 }
